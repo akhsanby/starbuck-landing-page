@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starbuck Landing Page</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./public/css/style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <a href="">
+          <img class="logo" src="./public/images/logo.png" alt="logo" />
+        </a>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">What's New</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="text-box">
+          <h2>
+            It's not just Coffee<br />
+            It's <span>Starbucks</span>
+          </h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi eaque quos laboriosam a optio fugiat libero explicabo obcaecati. Quis praesentium qui delectus nisi impedit expedita aspernatur ut molestiae numquam dolorum?</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="img-box">
+          <img class="starbuck" src="./public/images/img1.png" alt="drink" />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li><img src="./public/images/thumb1.png" alt="thumb1" onclick="imgSlide('./public/images/img1.png'); changeCircle('#017143');" /></li>
+        <li><img src="./public/images/thumb2.png" alt="thumb2" onclick="imgSlide('./public/images/img2.png'); changeCircle('#eb7495');" /></li>
+        <li><img src="./public/images/thumb3.png" alt="thumb3" onclick="imgSlide('./public/images/img3.png'); changeCircle('#d752b1');" /></li>
+      </ul>
+      <ul class="social-media">
+        <li>
+          <a href="#"><img src="./public/images/facebook.png" alt="facebook" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./public/images/twitter.png" alt="twitter.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./public/images/instagram.png" alt="instagram.png" /></a>
+        </li>
+      </ul>
+    </section>
+
+    <script>
+      function imgSlide(urlImage) {
+        document.querySelector(".starbuck").src = urlImage;
+      }
+
+      function changeCircle(color) {
+        const circle = document.querySelector(".circle");
+        circle.style.backgroundColor = color;
+      }
+    </script>
+  </body>
+</html>
